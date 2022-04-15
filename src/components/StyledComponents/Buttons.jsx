@@ -26,3 +26,18 @@ export const StyledWhiteButton = styled.button`
   border-radius: 10px;
   }
   `;
+
+
+export const StyledBlueButton = styled.button`
+  color: white;
+  background: var(--my-blue);
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+  background: #031e58;
+  border-radius: 10px;
+  }
+  `;

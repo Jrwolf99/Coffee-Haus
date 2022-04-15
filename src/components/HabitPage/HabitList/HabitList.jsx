@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 //packages
 import styled from "styled-components"
+import { StyledBlueButton } from "../../StyledComponents/Buttons";
+import Modal from "./Modal/Modal";
 
 
 const StyledHabitList = styled.div`
+`;
 
-    height: 100%;
-    background-color: rebeccapurple;
-    
-
+const StyledTitle = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
 `;
 
 
 
 
+
 export default function HabitList() {
+
+    const [showModal, setShowModal] = useState(false);
+
     return (
-        <StyledHabitList>HabitList</StyledHabitList>
+        <StyledHabitList>
+            <StyledTitle>
+                <p>Habits</p>
+                <StyledBlueButton onClick={() => setShowModal(true)}>Add</StyledBlueButton>
+            </StyledTitle>
+            {showModal && (
+                <Modal setShowModal={setShowModal}></Modal>
+            )}
+
+
+        </StyledHabitList>
     )
 }

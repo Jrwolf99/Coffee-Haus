@@ -37,7 +37,6 @@ const StyledHabitPage = styled.div`
 export default function HabitPage({ day, setDay }) {
     return (
         <StyledHabitPage>
-
             <HabitList />
             <Calendar
                 onChange={setDay}
@@ -46,7 +45,6 @@ export default function HabitPage({ day, setDay }) {
                 maxDate={new Date(2035, 1, 1)}
                 minDetail="month"
             />
-
         </StyledHabitPage>
     )
 }

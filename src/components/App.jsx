@@ -15,7 +15,6 @@ import HabitPage from "./HabitPage/HabitPage";
 import JournalPage from "./JournalPage/JournalPage";
 
 const StyledApp = styled.div`
-
 `;
 
 
