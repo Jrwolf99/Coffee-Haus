@@ -9,7 +9,7 @@ const StyledJournalCard = styled.div`
   padding: 1em;
   margin: .5rem;
   background-color: white;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,15 @@ const StyledJournalCard = styled.div`
     border: none;
     outline: none;
 }
+
+&>* {
+    @media (max-width: 900px) {
+
+        font-size: .7rem;
+    }
+
+}
+ 
 
 `;
 

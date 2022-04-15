@@ -1,21 +1,52 @@
 import React from "react";
+import { Calendar } from "react-calendar";
+
+//styles
+import "../../globalstyles/Calendar.css"
+
 //packages
 import styled from "styled-components"
+import HabitList from "./HabitList/HabitList";
 
-
-//components
 
 const StyledHabitPage = styled.div`
-    width: 73vw;
-    height: 85vh;
-    position: absolute;
-    background-color: red;
-    top: 11vh;
-    left: 23vw;
+
+     display: grid;
+     grid-template-rows: 1fr;
+     grid-template-columns: 1fr 1fr;
+
+     &>* {
+         height: calc(100% - .5rem);
+         margin: .5rem;
+        padding: 1em;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+     }
+
+     @media (max-width: 900px) {
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
 `;
 
-export default function HabitPage() {
+
+
+export default function HabitPage({ day, setDay }) {
     return (
-        <StyledHabitPage>HabitPage</StyledHabitPage>
+        <StyledHabitPage>
+
+            <HabitList />
+            <Calendar
+                onChange={setDay}
+                value={day}
+                minDate={new Date(2015, 1, 1)}
+                maxDate={new Date(2035, 1, 1)}
+                minDetail="month"
+            />
+
+        </StyledHabitPage>
     )
 }

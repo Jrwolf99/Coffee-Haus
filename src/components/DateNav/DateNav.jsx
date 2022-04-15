@@ -20,6 +20,13 @@ const StyledDateNav = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   color: white;
+
+@media (max-width: 900px) {
+  width: 70vw;
+  
+}
+
+
 `;
 
 const StyledToday = styled.p`

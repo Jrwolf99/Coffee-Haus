@@ -2,19 +2,17 @@ import React from 'react'
 import styled from "styled-components"
 import JournalCard from './JournalCard/JournalCard';
 
-
-
-
 const StyledJournalPage = styled.div`
-    width: 73vw;
-    height: 85vh;
     overflow: auto;
-    position: absolute;
-    top: 11vh;
-    left: 23vw;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 900px) {
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
 `;
 

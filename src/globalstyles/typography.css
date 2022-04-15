@@ -15,3 +15,11 @@ textarea {
 textarea {
   font-size: 0.7rem;
 }
+
+
+@media (max-width: 900px) {
+  * {
+  font-size: 0.8rem;
+  }
+  
+}
