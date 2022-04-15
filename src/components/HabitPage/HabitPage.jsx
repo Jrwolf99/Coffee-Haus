@@ -8,13 +8,15 @@ import "../../globalstyles/Calendar.css"
 import styled from "styled-components"
 import HabitList from "./HabitList/HabitList";
 
+//hooks
+import { useHabits } from "../../hooks/useHabits"
+
+
 
 const StyledHabitPage = styled.div`
-
      display: grid;
      grid-template-rows: 1fr;
      grid-template-columns: 1fr 1fr;
-
      &>* {
          height: calc(100% - .5rem);
          margin: .5rem;
@@ -23,7 +25,6 @@ const StyledHabitPage = styled.div`
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
      }
-
      @media (max-width: 900px) {
         height: 100%;
         grid-template-columns: 1fr;
@@ -35,9 +36,13 @@ const StyledHabitPage = styled.div`
 
 
 export default function HabitPage({ day, setDay }) {
+
+
+    const [habitHook] = useHabits();
+
     return (
         <StyledHabitPage>
-            <HabitList />
+            <HabitList habitHook={habitHook} />
             <Calendar
                 onChange={setDay}
                 value={day}

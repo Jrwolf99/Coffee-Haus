@@ -20,7 +20,7 @@ align-items: center;
 
 
 
-export default function HabitList() {
+export default function HabitList({ habitHook }) {
 
     const [showModal, setShowModal] = useState(false);
 
@@ -31,8 +31,20 @@ export default function HabitList() {
                 <StyledBlueButton onClick={() => setShowModal(true)}>Add</StyledBlueButton>
             </StyledTitle>
             {showModal && (
-                <Modal setShowModal={setShowModal}></Modal>
+                <Modal setShowModal={setShowModal} addHabit={habitHook.addHabit}></Modal>
             )}
+
+            {/* {habitHook.habits.map((habit, index) => {
+                return (
+                    <div key={index}>
+                        <HabitEntry habit={habit}
+                            day={day}
+                            HabitController={HabitController} />
+                    </div>)
+            })} */}
+
+
+
 
 
         </StyledHabitList>

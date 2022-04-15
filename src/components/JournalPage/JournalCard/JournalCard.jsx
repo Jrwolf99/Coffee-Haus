@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from "styled-components"
 
 //hooks
@@ -45,8 +45,18 @@ const StyledJournalCard = styled.div`
 
 
 export default function JournalCard({ title, placeholder, keyName }) {
-
     const [text, setText, getText] = useLocalStorage(keyName, "");
+    useEffect(() => {
+        if (localStorage.getItem(keyName) === null) {
+            setText("")
+        }
+        setText(getText(keyName));
+    }, [
+        setText,
+        getText,
+        keyName,
+    ]);
+
 
     return (
         <StyledJournalCard>

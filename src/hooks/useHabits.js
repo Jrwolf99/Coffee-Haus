@@ -1,6 +1,7 @@
-import { getDateAsString } from "../utilities/utility";
+import { useDates } from "./useDates";
 import { useLocalStorage } from "./useLocalStorage";
 export const useHabits = () => {
+  const { getDateAsString } = useDates();
   const habitsKey = `dayInfo/habits`;
 
   const [habits, setHabits] = useLocalStorage(habitsKey, []);

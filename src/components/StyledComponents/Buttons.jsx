@@ -3,15 +3,18 @@ import styled from "styled-components"
 
 
 export const StyledTodayBtn = styled.button`
-
-font-size: 1rem;
-transition: all 0.2s ease-in-out;
-
-&:hover {
-background: white;
-color: var(--my-blue);
-border-radius: 10px;
-}
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+  background: white;
+  color: var(--my-blue);
+  border-radius: 10px;
+  }
+`;
+export const StyledTodayDateNavBtn = styled(StyledTodayBtn)`
+        position: absolute;
+        margin-left: 4rem;
+        padding: .5em;
 `;
 
 
