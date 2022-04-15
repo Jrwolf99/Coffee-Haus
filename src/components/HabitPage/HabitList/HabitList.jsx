@@ -4,6 +4,7 @@ import React, { useState } from "react";
 //packages
 import styled from "styled-components"
 import { StyledBlueButton } from "../../StyledComponents/Buttons";
+import HabitEntry from "./HabitEntry/HabitEntry";
 import Modal from "./Modal/Modal";
 
 
@@ -20,9 +21,10 @@ align-items: center;
 
 
 
-export default function HabitList({ habitHook }) {
+export default function HabitList({ habitHook, day }) {
 
     const [showModal, setShowModal] = useState(false);
+    const { addHabit, habits, toggleHabitForDay, removeHabit } = habitHook;
 
     return (
         <StyledHabitList>
@@ -31,21 +33,20 @@ export default function HabitList({ habitHook }) {
                 <StyledBlueButton onClick={() => setShowModal(true)}>Add</StyledBlueButton>
             </StyledTitle>
             {showModal && (
-                <Modal setShowModal={setShowModal} addHabit={habitHook.addHabit}></Modal>
+                <Modal setShowModal={setShowModal} addHabit={addHabit}></Modal>
             )}
 
-            {/* {habitHook.habits.map((habit, index) => {
+            {habits.map((habit, index) => {
                 return (
                     <div key={index}>
-                        <HabitEntry habit={habit}
+                        <HabitEntry
+                            habit={habit}
                             day={day}
-                            HabitController={HabitController} />
+                            toggleHabitForDay={toggleHabitForDay}
+                            removeHabit={removeHabit}
+                        />
                     </div>)
-            })} */}
-
-
-
-
+            })}
 
         </StyledHabitList>
     )

@@ -18,7 +18,10 @@ const StyledModal = styled.div`
     align-items: center;
     box-shadow: 0px 0px 10px 10px rgba(225, 225, 225, 0.813);
 `;
-const StyledForm = styled.form`
+
+
+
+const StyledCard = styled.div`
     height: 30%;
     width: 50%;
     background-color: white;
@@ -40,37 +43,55 @@ const StyledForm = styled.form`
 
 
 
+const StyledForm = styled.form`
+    &>label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px
+
+    }
+    label > button{
+        width: 30%;
+        }
+
+`;
+
+
+
 
 export default function Modal({ setShowModal, addHabit }) {
     const [input, setInput] = useState("");
 
     return (
         <StyledModal>
-            <StyledForm>
+            <StyledCard>
                 <button
                     onClick={() => setShowModal(false)}
                 >X
                 </button>
-                <label>
-                    Add a habit to track:
-                    <input
-                        type="text"
-                        autoFocus={true}
-                        onChange={(e) => setInput(e.target.value)}
-                    />
-                    <StyledBlueButton
-                        onClick={() => {
-                            const habit = {
-                                name: input,
-                            };
-                            setShowModal(false);
-                            addHabit(habit);
-                        }}
-                    >
-                        add
-                    </StyledBlueButton>
-                </label>
-            </StyledForm>
+                <StyledForm>
+                    <label>
+                        Add a habit to track:
+                        <input
+                            type="text"
+                            autoFocus={true}
+                            onChange={(e) => setInput(e.target.value)}
+                        />
+                        <StyledBlueButton
+                            onClick={() => {
+                                const habit = {
+                                    name: input,
+                                };
+                                setShowModal(false);
+                                addHabit(habit);
+                            }}
+                        >
+                            add
+                        </StyledBlueButton>
+                    </label>
+                </StyledForm>
+            </StyledCard>
         </StyledModal>
     );
 }

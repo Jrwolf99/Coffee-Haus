@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Calendar } from "react-calendar";
 
 //styles
@@ -33,19 +33,14 @@ const StyledHabitPage = styled.div`
 
 `;
 
-
-
-export default function HabitPage({ day, setDay }) {
-
-
+export default function HabitPage({ dateHook }) {
     const [habitHook] = useHabits();
-
     return (
         <StyledHabitPage>
-            <HabitList habitHook={habitHook} />
+            <HabitList habitHook={habitHook} day={dateHook.day} />
             <Calendar
-                onChange={setDay}
-                value={day}
+                onChange={dateHook.setDay}
+                value={dateHook.day}
                 minDate={new Date(2015, 1, 1)}
                 maxDate={new Date(2035, 1, 1)}
                 minDetail="month"

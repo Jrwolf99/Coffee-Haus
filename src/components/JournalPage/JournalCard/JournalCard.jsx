@@ -45,6 +45,7 @@ const StyledJournalCard = styled.div`
 
 
 export default function JournalCard({ title, placeholder, keyName }) {
+
     const [text, setText, getText] = useLocalStorage(keyName, "");
     useEffect(() => {
         if (localStorage.getItem(keyName) === null) {

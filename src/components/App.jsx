@@ -40,8 +40,8 @@ export default function App() {
         <SideNav dateHook={dateHook} />
         <StyledWorkspace>
           <Routes>
-            <Route path="/" element={<HabitPage />} />
-            <Route path="/habit" element={<HabitPage />} />
+            <Route path="/" element={<HabitPage dateHook={dateHook} />} />
+            <Route path="/habit" element={<HabitPage dateHook={dateHook} />} />
             <Route path="/journal" element={<JournalPage day={dateHook.day} />} />
           </Routes>
 
