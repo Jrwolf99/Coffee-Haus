@@ -22,7 +22,6 @@ const StyledModal = styled.div`
 
 
 const StyledCard = styled.div`
-    height: 30%;
     width: 50%;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
