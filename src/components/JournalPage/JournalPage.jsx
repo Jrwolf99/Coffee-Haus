@@ -3,7 +3,7 @@ import styled from "styled-components"
 import JournalCard from './JournalCard/JournalCard';
 
 const StyledJournalPage = styled.div`
-    overflow: auto;
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
