@@ -16,6 +16,10 @@ import JournalPage from "./JournalPage/JournalPage";
 import { useDates } from "../hooks/useDates";
 
 const StyledApp = styled.div`
+/* display: grid;
+grid-template: "sidenav datenav datenav"
+                "sidenav workspace workspace"
+                "sidenav workspace workspace"; */
 `;
 
 
@@ -44,7 +48,6 @@ export default function App() {
             <Route path="/habit" element={<HabitPage dateHook={dateHook} />} />
             <Route path="/journal" element={<JournalPage day={dateHook.day} />} />
           </Routes>
-
         </StyledWorkspace>
       </Router>
     </StyledApp>
