@@ -16,19 +16,16 @@ import JournalPage from "./JournalPage/JournalPage";
 import { useDates } from "../hooks/useDates";
 
 const StyledApp = styled.div`
-/* display: grid;
+display: grid;
 grid-template: "sidenav datenav datenav"
                 "sidenav workspace workspace"
-                "sidenav workspace workspace"; */
+                "sidenav workspace workspace";
 `;
 
 
 const StyledWorkspace = styled.div`
-    width: 72vw;
-    height: 80vh;
-    position: absolute;
-    top: 13vh;
-    left: 23.5vw;
+  grid-area: workspace;
+  width: 65vw;
 `;
 
 

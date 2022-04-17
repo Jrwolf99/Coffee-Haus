@@ -6,11 +6,9 @@ import styled from "styled-components"
 import { StyledTodayDateNavBtn, StyledWhiteButton } from "../StyledComponents/Buttons";
 
 const StyledDateNav = styled.div`
-  width: 74vw;
   padding: 1em;
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
+  grid-area: datenav;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

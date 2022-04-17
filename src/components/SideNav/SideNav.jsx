@@ -15,14 +15,14 @@ import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { useWindowSize } from "../../hooks/useWindowSize"
 
 //components
-import { StyledTodayBtn, StyledWhiteButton } from "../StyledComponents/Buttons";
+import { StyledTodayBtn } from "../StyledComponents/Buttons";
 
 
 
 const StyledSideNav = styled.div`
-  width: 21.6vw;
-  height: 94vh;
-  margin-top: 2vh;
+  grid-area: sidenav;
+  height: 95vh;
+
   border-radius: 0 10px 10px 0;
   background: var(--gradient-blue);
   color: white;
