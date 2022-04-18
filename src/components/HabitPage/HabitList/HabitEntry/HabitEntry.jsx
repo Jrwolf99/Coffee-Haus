@@ -9,9 +9,9 @@ const StyledHabitEntry = styled.div`
         justify-content: space-between;
         align-items: center;
         font-size: 1.1rem;
-        background-color: whitesmoke;
+        background-color: #f9f9f9;
         box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35);
-        margin: .4rem 0.2rem;
+        margin: .8rem 0.2rem;
         padding: .6em 1em;
         border-radius: 6px;
         list-style-type: none;
