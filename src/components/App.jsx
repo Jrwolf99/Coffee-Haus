@@ -25,7 +25,8 @@ grid-template: "sidenav datenav datenav"
 
 const StyledWorkspace = styled.div`
   grid-area: workspace;
-  width: 65vw;
+  width: 85vw;
+  height: 87vh;
 `;
 
 

@@ -22,6 +22,7 @@ import { StyledTodayBtn } from "../StyledComponents/Buttons";
 const StyledSideNav = styled.div`
   grid-area: sidenav;
   height: 95vh;
+  margin-top: 2vh;
 
   border-radius: 0 10px 10px 0;
   background: var(--gradient-blue);
