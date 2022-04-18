@@ -6,16 +6,16 @@ import Login from './Login';
 
 
 export default function App() {
-    return (
-        <>
+  return (
+    <>
 
-            <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/home" element={<Home />} />
-            </Routes>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home/*" element={<Home />} />
+      </Routes>
 
 
 
-        </>
-    )
+    </>
+  )
 }

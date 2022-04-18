@@ -51,8 +51,8 @@ export default function Home() {
       <SideNav dateHook={dateHook} />
       <StyledWorkspace>
         <Routes>
-          <Route path="/home/habit" element={<HabitPage dateHook={dateHook} />} />
-          <Route path="/home/journal" element={<JournalPage day={dateHook.day} />} />
+          <Route path="habit*" element={<HabitPage dateHook={dateHook} />} />
+          <Route path="journal" element={<JournalPage day={dateHook.day} />} />
         </Routes>
       </StyledWorkspace>
     </StyledHome>
