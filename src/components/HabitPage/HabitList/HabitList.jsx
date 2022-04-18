@@ -11,6 +11,7 @@ import Modal from "./Modal/Modal";
 const StyledHabitList = styled.div`
 overflow: auto;
 padding: 1.5em;
+min-height: 30vh;
 `;
 
 const StyledTitle = styled.div`
