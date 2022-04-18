@@ -62,12 +62,12 @@ export default function SideNav() {
         {size[0] < 900 && <img src={CoffeeHausSmall} alt="CoffeeHaus logo" />}
         {size[0] < 900 && <StyledTodayBtn>Today</StyledTodayBtn>}
 
-        <StyledSideLink to="/habit">
+        <StyledSideLink to="/home/habit">
             <FontAwesomeIcon icon={faPuzzlePiece} />
             <p>Habits</p>
         </StyledSideLink>
 
-        <StyledSideLink to="/journal">
+        <StyledSideLink to="/home/journal">
             <FontAwesomeIcon icon={faBook} />
             <p>Journal</p>
         </StyledSideLink>
