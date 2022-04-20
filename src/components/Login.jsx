@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import styled from "styled-components"
 import { Link } from 'react-router-dom'
 
-import { StyledFlexColumn } from './StyledComponents/Utility';
+import { StyledErrorMsg, StyledFlexColumn, StyledLoading } from './StyledComponents/Utility';
+
+import { useLogin } from '../hooks/useLogin';
 
 
 const StyledLoginPage = styled.div`
@@ -34,12 +36,13 @@ const StyledLoginForm = styled.form`
 
 export default function Login() {
 
+    const { login, error, isPending } = useLogin();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email, password)
+        login(email, password);
     }
 
 
@@ -63,12 +66,25 @@ export default function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-                <button>Submit</button>
+
+                {!isPending && <button>Submit</button>}
+                {isPending && <StyledLoading disabled>loading...</StyledLoading>}
+                {error && <StyledErrorMsg>{error}</StyledErrorMsg>}
+
+
+
                 <StyledFlexColumn>
                     <Link to="/signup">Not signed up? Resgister here!</Link>
-                    <Link to="/home/habit">Continue as Guest</Link>
+                    <button onClick={(e) => {
+                        e.preventDefault();
+                        setEmail("guest@guest.com");
+                        setPassword("test12345");
+                        handleSubmit(e);
+                    }
+
+                    } >Continue as Guest</button>
                 </StyledFlexColumn>
             </StyledLoginForm>
-        </StyledLoginPage>
+        </StyledLoginPage >
     )
 }

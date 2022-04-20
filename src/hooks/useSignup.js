@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { projectAuth } from "../firebase/config";
 import { useAuthContext } from "../context/AuthContext";
+
+//TODO: Create a working cleanup function
 
 export const useSignup = () => {
   const [error, setError] = useState(null);

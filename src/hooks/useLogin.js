@@ -4,21 +4,24 @@ import { useAuthContext } from "../context/AuthContext";
 
 //TODO: Create a working cleanup function
 
-export const useLogout = () => {
+export const useLogin = () => {
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
 
-  const logout = async () => {
+  const login = async (email, password) => {
     setError(null);
     setIsPending(true);
 
     //sign the user out
     try {
-      await projectAuth.signOut();
+      const response = await projectAuth.signInWithEmailAndPassword(
+        email,
+        password
+      );
 
       //dispatch logout option
-      dispatch({ type: "LOGOUT" });
+      dispatch({ type: "LOGIN", payload: response.user });
 
       setError(null);
       setIsPending(false);
@@ -29,5 +32,5 @@ export const useLogout = () => {
     }
   };
 
-  return { logout, error, isPending };
+  return { login, error, isPending };
 };

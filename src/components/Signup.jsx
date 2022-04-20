@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useSignup } from '../hooks/useSignup';
+import { StyledErrorMsg, StyledLoading } from './StyledComponents/Utility';
 
 
 
@@ -30,12 +31,6 @@ gap: 20px;
 }
 `;
 
-const StyledLoading = styled.button`
-`;
-const StyledErrorMsg = styled.p`
-color: red;
-font-size: 0.8rem;
-`;
 
 
 export default function Signup() {

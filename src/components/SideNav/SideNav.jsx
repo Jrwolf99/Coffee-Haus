@@ -13,6 +13,7 @@ import { faBook } from "@fortawesome/free-solid-svg-icons";
 
 //hooks
 import { useWindowSize } from "../../hooks/useWindowSize"
+import { useLogout } from "../../hooks/useLogout"
 
 //components
 import { StyledNavBtn } from "../StyledComponents/Buttons";
@@ -65,6 +66,11 @@ const StyledLogoutBtn = styled(StyledNavBtn)`
 
 
 export default function SideNav() {
+    const { logout } = useLogout();
+    const handleLogout = () => {
+        logout();
+    }
+
     const size = useWindowSize();
     return <StyledSideNav>
         {size[0] > 900 && <img src={CoffeeHaus} alt="CoffeeHaus logo" />}
@@ -82,7 +88,7 @@ export default function SideNav() {
         </StyledSideLink>
 
 
-        <StyledLogoutBtn>Logout</StyledLogoutBtn>
+        <StyledLogoutBtn onClick={handleLogout}>Logout</StyledLogoutBtn>
 
 
     </StyledSideNav>;
