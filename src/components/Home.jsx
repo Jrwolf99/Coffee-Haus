@@ -18,8 +18,7 @@ import { useDates } from "../hooks/useDates";
 const StyledHome = styled.div`
 display: grid;
 gap: 1rem;
-grid-template: "sidenav datenav datenav"
-                "sidenav workspace workspace"
+grid-template: "sidenav datenav datenav" 12vh
                 "sidenav workspace workspace";
 `;
 
@@ -27,11 +26,9 @@ grid-template: "sidenav datenav datenav"
 const StyledWorkspace = styled.div`
   grid-area: workspace;
   width: 85vw;
-  height: 80vh;
-  padding: 1em;
   @media (min-width: 1500px) {
     max-width: 1500px;
-    margin: auto;
+    margin-inline: auto;
   }
 
 
