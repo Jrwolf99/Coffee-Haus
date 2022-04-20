@@ -75,11 +75,10 @@ export default function Login() {
 
                 <StyledFlexColumn>
                     <Link to="/signup">Not signed up? Resgister here!</Link>
-                    <button onClick={(e) => {
-                        e.preventDefault();
+                    <button onClick={() => {
                         setEmail("guest@guest.com");
                         setPassword("test12345");
-                        handleSubmit(e);
+                        login(email, password);
                     }
 
                     } >Continue as Guest</button>

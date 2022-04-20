@@ -13,16 +13,12 @@ export default function App() {
 
   return (
     <>
-
       <Routes>
         <Route path="/*" element={user ? < Home /> : <Login />} />
-        <Route path="/login" element={!user ? <Login /> : <Home />} />
-        <Route path="/signup" element={!user ? <Signup /> : <Home />} />
+        <Route path="/login/*" element={!user ? <Login /> : <Home />} />
+        <Route path="/signup/*" element={!user ? <Signup /> : <Home />} />
         <Route path="/home/*" element={user ? < Home /> : <Login />} />
       </Routes>
-
-
-
     </>
   )
 }
