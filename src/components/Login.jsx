@@ -47,10 +47,10 @@ export default function Login() {
         <StyledLoginPage>
             <StyledLoginForm onSubmit={handleSubmit}>
                 <label>
-                    Username:
+                    Email:
                     <input
                         type="text"
-                        autoFocus={true}
+                        autoComplete="email"
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </label>
@@ -59,7 +59,7 @@ export default function Login() {
                     Password:
                     <input
                         type="password"
-                        autoFocus={true}
+                        autoComplete="password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>

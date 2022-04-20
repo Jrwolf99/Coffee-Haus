@@ -74,7 +74,7 @@ export default function Modal({ setShowModal, addHabit }) {
                         Add a habit to track:
                         <input
                             type="text"
-                            autoFocus={true}
+                            autoComplete="off"
                             onChange={(e) => setInput(e.target.value)}
                         />
                         <StyledBlueButton

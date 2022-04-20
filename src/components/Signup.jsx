@@ -62,15 +62,15 @@ export default function Signup() {
                     Display Name:
                     <input
                         type="text"
-                        autoFocus={true}
+                        autoComplete="off"
                         onChange={(e) => setDisplayName(e.target.value)}
                     />
                 </label>
                 <label>
-                    Username:
+                    Email:
                     <input
                         type="text"
-                        autoFocus={true}
+                        autoComplete="email"
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </label>
@@ -79,7 +79,7 @@ export default function Signup() {
                     Password:
                     <input
                         type="password"
-                        autoFocus={true}
+                        autoComplete="password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>

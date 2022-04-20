@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 
-export const StyledTodayBtn = styled.button`
+export const StyledNavBtn = styled.button`
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
   &:hover {
@@ -10,11 +10,6 @@ export const StyledTodayBtn = styled.button`
   color: var(--my-blue);
   border-radius: 10px;
   }
-`;
-export const StyledTodayDateNavBtn = styled(StyledTodayBtn)`
-        position: absolute;
-        margin-left: 4rem;
-        padding: .5em;
 `;
 
 

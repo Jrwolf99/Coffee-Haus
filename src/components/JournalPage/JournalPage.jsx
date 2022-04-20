@@ -4,6 +4,7 @@ import JournalCard from './JournalCard/JournalCard';
 
 const StyledJournalPage = styled.div`
     height: 100%;
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;

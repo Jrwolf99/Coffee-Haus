@@ -3,17 +3,12 @@ import styled from "styled-components"
 
 
 //components
-import { StyledTodayDateNavBtn, StyledWhiteButton } from "../StyledComponents/Buttons";
+import { StyledNavBtn, StyledWhiteButton } from "../StyledComponents/Buttons";
 
 const StyledDateNav = styled.div`
-  
-  padding: 1em;
-  
   grid-area: datenav;
-  height: 8vh;
-  margin: 2vh 1rem 0 1rem;
-
-
+  margin-top: 2vh;
+  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +19,13 @@ const StyledDateNav = styled.div`
 
 
 `;
+
+export const StyledTodayBtn = styled(StyledNavBtn)`
+        position: absolute;
+        margin-left: 4rem;
+        padding: .5em;
+`;
+
 
 
 
@@ -37,9 +39,9 @@ export default function DateNav({ dateHook }) {
       onClick={() => handleDayChange("left")}
     >&lt;</StyledWhiteButton>
 
-    <StyledTodayDateNavBtn onClick={() => { setDay(getToday()) }}>
+    <StyledTodayBtn onClick={() => { setDay(getToday()) }}>
       <p>Today</p>
-    </StyledTodayDateNavBtn>
+    </StyledTodayBtn>
 
     <div>{getDateAsString(day)}</div>
 

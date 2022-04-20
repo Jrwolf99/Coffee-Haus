@@ -15,7 +15,10 @@ import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { useWindowSize } from "../../hooks/useWindowSize"
 
 //components
-import { StyledTodayBtn } from "../StyledComponents/Buttons";
+import { StyledNavBtn } from "../StyledComponents/Buttons";
+
+
+
 
 
 
@@ -23,7 +26,6 @@ const StyledSideNav = styled.div`
   grid-area: sidenav;
   height: 95vh;
   margin-top: 2vh;
-
   border-radius: 0 10px 10px 0;
   background: var(--gradient-blue);
   color: white;
@@ -55,12 +57,19 @@ const StyledSideLink = styled(Link)`
 
 `;
 
+const StyledLogoutBtn = styled(StyledNavBtn)`
+ margin-top: auto;
+ margin-bottom: 1rem;
+`;
+
+
+
 export default function SideNav() {
     const size = useWindowSize();
     return <StyledSideNav>
         {size[0] > 900 && <img src={CoffeeHaus} alt="CoffeeHaus logo" />}
         {size[0] < 900 && <img src={CoffeeHausSmall} alt="CoffeeHaus logo" />}
-        {size[0] < 900 && <StyledTodayBtn>Today</StyledTodayBtn>}
+        {size[0] < 900 && <StyledNavBtn>Today</StyledNavBtn>}
 
         <StyledSideLink to="/home/habit">
             <FontAwesomeIcon icon={faPuzzlePiece} />
@@ -71,6 +80,10 @@ export default function SideNav() {
             <FontAwesomeIcon icon={faBook} />
             <p>Journal</p>
         </StyledSideLink>
+
+
+        <StyledLogoutBtn>Logout</StyledLogoutBtn>
+
 
     </StyledSideNav>;
 }
