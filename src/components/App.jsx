@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuthContext } from '../context/AuthContext';
 import Home from './Home';
 import Login from './Login';
@@ -14,10 +14,10 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/*" element={user ? < Home /> : <Login />} />
-        <Route path="/login/*" element={!user ? <Login /> : <Home />} />
-        <Route path="/signup/*" element={!user ? <Signup /> : <Home />} />
-        <Route path="/home/*" element={user ? < Home /> : <Login />} />
+        <Route path="/*" element={user ? < Home /> : <Navigate to="/login" replace />} />
+        <Route path="/login/*" element={!user ? <Login /> : <Navigate to="/" replace />} />
+        <Route path="/signup/*" element={!user ? <Signup /> : <Navigate to="/" replace />} />
+        <Route path="/home/*" element={user ? < Home /> : <Navigate to="/login" replace />} />
       </Routes>
     </>
   )

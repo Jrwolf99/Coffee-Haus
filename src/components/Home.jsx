@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //packages
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import styled from "styled-components";
 
 //styles
@@ -29,7 +29,6 @@ const StyledWorkspace = styled.div`
   width: 85vw;
   height: 80vh;
   padding: 1em;
-  background-color: red;
   @media (min-width: 1500px) {
     max-width: 1500px;
     margin: auto;
@@ -51,7 +50,8 @@ export default function Home() {
       <StyledWorkspace>
         <Routes>
           <Route path="habit/*" element={<HabitPage dateHook={dateHook} />} />
-          <Route path="journal" element={<JournalPage day={dateHook.day} />} />
+          <Route path="/*" element={<Navigate to="/home/habit" replace />} />
+          <Route path="journal/*" element={<JournalPage day={dateHook.day} />} />
         </Routes>
       </StyledWorkspace>
     </StyledHome>
