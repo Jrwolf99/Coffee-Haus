@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import styled from "styled-components"
 import { Link } from 'react-router-dom'
 
+import { StyledFlexColumn } from './StyledComponents/Utility';
+
+
 const StyledLoginPage = styled.div`
     height: 100vh;
     width: 100vw;
@@ -31,18 +34,24 @@ const StyledLoginForm = styled.form`
 
 export default function Login() {
 
-    const [username, setUsername] = useState();
+    const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(email, password)
+    }
+
 
     return (
         <StyledLoginPage>
-            <StyledLoginForm>
+            <StyledLoginForm onSubmit={handleSubmit}>
                 <label>
                     Username:
                     <input
                         type="text"
                         autoFocus={true}
-                        onChange={(e) => setUsername(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </label>
 
@@ -54,8 +63,11 @@ export default function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-                <Link to="/">Submit</Link>
-                <Link to="/home">Continue as Guest</Link>
+                <button>Submit</button>
+                <StyledFlexColumn>
+                    <Link to="/signup">Not signed up? Resgister here!</Link>
+                    <Link to="/home/habit">Continue as Guest</Link>
+                </StyledFlexColumn>
             </StyledLoginForm>
         </StyledLoginPage>
     )
