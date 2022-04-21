@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import styled from "styled-components"
 import { Link } from 'react-router-dom'
 
-import { StyledErrorMsg, StyledFlexColumn, StyledLoading } from './StyledComponents/Utility';
+import { StyledErrorMsg, StyledLoading } from './StyledComponents/Utility';
+import { StyledBlueButton, StyledLoginButtonType2, StyledLoginLinkType2 } from "./StyledComponents/Buttons"
+
 
 import { useLogin } from '../hooks/useLogin';
 
@@ -30,6 +32,20 @@ const StyledLoginForm = styled.form`
         flex-direction: column;
         align-items: left;
     }
+    &>button {
+        width: 70%;
+    }
+`;
+
+
+const StyledButtonColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+
+  
 `;
 
 
@@ -67,22 +83,24 @@ export default function Login() {
                     />
                 </label>
 
-                {!isPending && <button>Submit</button>}
+                {!isPending && <StyledBlueButton>Submit</StyledBlueButton>}
                 {isPending && <StyledLoading disabled>loading...</StyledLoading>}
                 {error && <StyledErrorMsg>{error}</StyledErrorMsg>}
 
 
 
-                <StyledFlexColumn>
-                    <Link to="/signup">Not signed up? Resgister here!</Link>
-                    <button onClick={() => {
+                <StyledButtonColumn>
+                    <StyledLoginButtonType2>
+                        <StyledLoginLinkType2 to="/signup">Not signed up? Resgister here!</StyledLoginLinkType2>
+                    </StyledLoginButtonType2>
+                    <StyledLoginButtonType2 onClick={() => {
                         setEmail("guest@guest.com");
                         setPassword("test12345");
                         login(email, password);
                     }
 
-                    } >Continue as Guest</button>
-                </StyledFlexColumn>
+                    } >Continue as Guest</StyledLoginButtonType2>
+                </StyledButtonColumn>
             </StyledLoginForm>
         </StyledLoginPage >
     )

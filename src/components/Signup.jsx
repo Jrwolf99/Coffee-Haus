@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useSignup } from '../hooks/useSignup';
+import { StyledBlueButton, StyledLoginLinkType2 } from './StyledComponents/Buttons';
 import { StyledErrorMsg, StyledLoading } from './StyledComponents/Utility';
 
 
@@ -29,6 +30,9 @@ gap: 20px;
     flex-direction: column;
     align-items: left;
 }
+&>button {
+    width: 90%;
+}
 `;
 
 
@@ -52,7 +56,7 @@ export default function Signup() {
     return (
         <StyledLoginPage>
             <StyledLoginForm onSubmit={handleSubmit}>
-                <Link to="/">Back to Login</Link>
+                <StyledLoginLinkType2 to="/">Back to Login</StyledLoginLinkType2>
                 <label>
                     Display Name:
                     <input
@@ -78,7 +82,7 @@ export default function Signup() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-                {!isPending && <button>Sign Up</button>}
+                {!isPending && <StyledBlueButton>Sign Up</StyledBlueButton>}
                 {isPending && <StyledLoading disabled>loading...</StyledLoading>}
                 {error && <StyledErrorMsg>{error}</StyledErrorMsg>}
             </StyledLoginForm>

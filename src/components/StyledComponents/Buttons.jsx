@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 
 
@@ -24,6 +25,29 @@ export const StyledWhiteButton = styled.button`
   border-radius: 10px;
   }
   `;
+
+
+export const StyledLoginButtonType2 = styled.button`
+        padding: 0.5em 1em;
+        color: black;
+        text-decoration: none;
+    &:hover {
+        background-color: var(--my-blue);
+        color: white;
+        border-radius: 5px;
+        transition: all .2s;
+    }`;
+
+export const StyledLoginLinkType2 = styled(Link)`
+        padding: 0.5em;
+        color: black;
+        text-decoration: none;
+    &:hover {
+        background-color: var(--my-blue);
+        color: white;
+        border-radius: 5px;
+        transition: all .2s;
+    }`;
 
 
 export const StyledBlueButton = styled.button`
