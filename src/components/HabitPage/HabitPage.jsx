@@ -10,6 +10,7 @@ import HabitList from "./HabitList/HabitList";
 
 //hooks
 import { useHabits } from "../../hooks/useHabits"
+import useMobile from "../../hooks/useMobile";
 
 
 
@@ -36,16 +37,18 @@ const StyledHabitPage = styled.div`
 
 export default function HabitPage({ dateHook }) {
     const [habitHook] = useHabits();
+    const { isMobile } = useMobile();
     return (
         <StyledHabitPage>
             <HabitList habitHook={habitHook} day={dateHook.day} />
-            <Calendar
-                onChange={dateHook.setDay}
-                value={dateHook.day}
-                minDate={new Date(2015, 1, 1)}
-                maxDate={new Date(2035, 1, 1)}
-                minDetail="month"
-            />
+            {!isMobile &&
+                <Calendar
+                    onChange={dateHook.setDay}
+                    value={dateHook.day}
+                    minDate={new Date(2015, 1, 1)}
+                    maxDate={new Date(2035, 1, 1)}
+                    minDetail="month"
+                />}
         </StyledHabitPage>
     )
 }

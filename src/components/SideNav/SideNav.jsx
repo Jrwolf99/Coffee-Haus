@@ -38,6 +38,15 @@ const StyledSideNav = styled.div`
   &>* {
       padding: 1em;
   }
+  @media (max-width: 900px) {
+    &>* {
+      padding:  1.4em .8em;
+
+      font-size: .7rem;
+  }
+  }
+
+
 `;
 
 
@@ -55,6 +64,13 @@ const StyledSideLink = styled(Link)`
   padding: 0.6em 1em;
   outline: none;
  }
+ @media (max-width: 900px) {
+    justify-content: center;
+    &>p {
+    display: none;
+ }
+}
+
 
 `;
 

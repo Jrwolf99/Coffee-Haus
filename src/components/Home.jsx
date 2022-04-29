@@ -25,7 +25,8 @@ grid-template: "sidenav datenav datenav" 12vh
 
 const StyledWorkspace = styled.div`
   grid-area: workspace;
-  width: 85vw;
+  width: 80vw;
+  margin-right: .5rem;
   @media (min-width: 1500px) {
     max-width: 1500px;
     margin-inline: auto;
