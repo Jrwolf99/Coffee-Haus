@@ -44,7 +44,7 @@ const StyledJournalCard = styled.div`
 
 
 
-export default function JournalCard({ title, placeholder, keyName }) {
+export default function JournalCard({ title, placeholder, keyName, value }) {
 
     const [text, setText, getText] = useLocalStorage(keyName, "");
     useEffect(() => {

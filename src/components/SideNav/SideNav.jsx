@@ -77,6 +77,7 @@ const StyledSideLink = styled(Link)`
 const StyledLogoutBtn = styled(StyledNavBtn)`
  margin-top: auto;
  margin-bottom: 1rem;
+ 
 `;
 
 

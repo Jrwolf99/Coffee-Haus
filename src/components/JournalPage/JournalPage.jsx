@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import JournalCard from './JournalCard/JournalCard';
+import { useFetch } from "../../hooks/useFetch"
 
 const StyledJournalPage = styled.div`
     width: 100%;
@@ -14,12 +15,11 @@ const StyledJournalPage = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
 `;
 
 
 export default function JournalPage({ day }) {
-
+    const { data } = useFetch("https://stoicquotesapi.com/v1/api/quotes/random");
     return (
         <StyledJournalPage>
             <JournalCard
@@ -38,7 +38,6 @@ export default function JournalPage({ day }) {
                 keyName={"dayInfo/" + day.toLocaleDateString("en-US") + "/plan"}
             />
             <JournalCard
-                placeholder="quote here"
                 title={"Quote of the Day"}
                 keyName={"dayInfo/" + day.toLocaleDateString("en-US") + "/quote"}
             />
