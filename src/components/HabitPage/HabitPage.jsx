@@ -16,9 +16,12 @@ import useMobile from "../../hooks/useMobile";
 
 const StyledHabitPage = styled.div`
     width: 100%;
+    max-height: 80vh;
      display: grid;
      grid-template-rows: 1fr;
      grid-template-columns: 1fr 1fr;
+     gap: 2vw;
+     padding-inline: 6vw;
      &>* {
          height: calc(100% - .5rem);
          margin: .5rem;

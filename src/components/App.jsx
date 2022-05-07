@@ -8,9 +8,7 @@ import Signup from './Signup';
 
 
 export default function App() {
-
   const { user } = useAuthContext();
-
   return (
     <>
       <Routes>

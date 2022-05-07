@@ -17,6 +17,7 @@ export const StyledNavBtn = styled.button`
 
 export const StyledWhiteButton = styled.button`
   padding: 0.1em 0.7em;
+  margin: 1rem;
   font-size: 1.5rem;
   transition: all 0.2s ease-in-out;
   &:hover {
