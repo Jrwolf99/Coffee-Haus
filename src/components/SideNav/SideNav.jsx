@@ -42,7 +42,7 @@ const StyledSideNav = styled.div`
     &>* {
       padding:  1.4em .8em;
 
-      font-size: .7rem;
+      font-size: 1rem;
   }
   }
 

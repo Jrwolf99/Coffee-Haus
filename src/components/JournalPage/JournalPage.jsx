@@ -40,6 +40,7 @@ export default function JournalPage({ day }) {
             <JournalCard
                 title={"Quote of the Day"}
                 keyName={"dayInfo/" + day.toLocaleDateString("en-US") + "/quote"}
+                placeholder={data ? "\"" + data.body + "\"\n- " + data.author : "loading..."}
             />
         </StyledJournalPage>
     )

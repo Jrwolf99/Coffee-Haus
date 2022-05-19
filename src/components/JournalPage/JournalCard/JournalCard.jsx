@@ -32,8 +32,7 @@ const StyledJournalCard = styled.div`
 
 &>* {
     @media (max-width: 900px) {
-
-        font-size: .7rem;
+        font-size: 1rem;
     }
 
 }

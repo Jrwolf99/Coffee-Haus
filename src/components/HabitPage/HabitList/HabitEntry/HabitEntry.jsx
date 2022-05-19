@@ -16,7 +16,7 @@ const StyledHabitEntry = styled.div`
         border-radius: 6px;
         list-style-type: none;
         @media (max-width: 900px) {
-            font-size: .8rem;
+            font-size: 1rem;
         }
 `;
 
