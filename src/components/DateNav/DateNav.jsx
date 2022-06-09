@@ -12,7 +12,8 @@ const StyledDateNav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:  linear-gradient(144.59deg, #00345a -63.5%, #1100d7 481.28%);
+  background: var(gradient-blue)
+  /* background-color: pink; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   color: white;

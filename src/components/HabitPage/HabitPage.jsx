@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
-import { Calendar } from "react-calendar";
 
-//styles
-import "../../globalstyles/Calendar.css"
 
 //packages
 import styled from "styled-components"
@@ -26,9 +23,9 @@ const StyledHabitPage = styled.div`
          height: calc(100% - .5rem);
          margin: .5rem;
         padding: 1em;
-        background-color: white;
+        background-color: #ebecf0;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
+        border-radius: 5px;
      }
      @media (max-width: 900px) {
         height: 100%;
@@ -44,14 +41,7 @@ export default function HabitPage({ dateHook }) {
     return (
         <StyledHabitPage>
             <HabitList habitHook={habitHook} day={dateHook.day} />
-            {!isMobile &&
-                <Calendar
-                    onChange={dateHook.setDay}
-                    value={dateHook.day}
-                    minDate={new Date(2015, 1, 1)}
-                    maxDate={new Date(2035, 1, 1)}
-                    minDetail="month"
-                />}
+
         </StyledHabitPage>
     )
 }

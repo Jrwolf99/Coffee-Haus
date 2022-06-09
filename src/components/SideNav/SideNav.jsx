@@ -56,8 +56,10 @@ const StyledSideLink = styled(Link)`
   display: flex;
   justify-content: left;
   align-items: center;
+
+
   &:hover {
-  background: linear-gradient(144.59deg, #001f35 -63.5%, #1100d7 481.28%);
+      background-color: #ffffff16;
  }
  &>p {
     color: white;
@@ -66,9 +68,14 @@ const StyledSideLink = styled(Link)`
  }
  @media (max-width: 900px) {
     justify-content: center;
-    &>p {
-    display: none;
- }
+        &>p {
+        display: none;
+    }
+ 
+    &>*{
+            font-size: 1.4rem;
+        }
+
 }
 
 
@@ -103,10 +110,6 @@ export default function SideNav() {
             <FontAwesomeIcon icon={faBook} />
             <p>Journal</p>
         </StyledSideLink>
-
-
         <StyledLogoutBtn onClick={handleLogout}>Logout</StyledLogoutBtn>
-
-
     </StyledSideNav>;
 }

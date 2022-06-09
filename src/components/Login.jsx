@@ -31,9 +31,12 @@ const StyledLoginForm = styled.form`
         display: flex;
         flex-direction: column;
         align-items: left;
+        &>input {
+            width: 360px;
+        }
     }
     &>button {
-        width: 70%;
+        width: 100%;
     }
 `;
 

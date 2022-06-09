@@ -20,9 +20,11 @@ display: grid;
 gap: 1rem;
 grid-template: "sidenav datenav datenav" 12vh
                 "sidenav workspace workspace";
+
+
+
+
 `;
-
-
 const StyledWorkspace = styled.div`
   grid-area: workspace;
   width: 80vw;
@@ -31,16 +33,11 @@ const StyledWorkspace = styled.div`
     max-width: 1500px;
     margin-inline: auto;
   }
-
-
 `;
 
 
-
 export default function Home() {
-
   const [dateHook] = useDates();
-
   return (
     <StyledHome>
       <DateNav dateHook={dateHook} />

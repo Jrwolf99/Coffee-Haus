@@ -11,8 +11,7 @@ const StyledModal = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(225, 225, 225, 0.813);
-    border-radius: 10px;
+    background-color: rgba(42, 42, 51, 0.813);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,20 +22,19 @@ const StyledModal = styled.div`
 
 const StyledCard = styled.div`
     width: 50%;
-    background-color: white;
+    background-color: #ebecf0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 1em;
-    &>label{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px
+    position: relative;
 
+    &>button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
     }
-    label > button{
-        width: 30%;
-        }
+
 
 `;
 
@@ -47,11 +45,14 @@ const StyledForm = styled.form`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px
-
+        gap: 20px;
+        &>input {
+            width: 50%;
+            border: none;
+        }
     }
     label > button{
-        width: 30%;
+        width: 50%;
         }
 
 `;

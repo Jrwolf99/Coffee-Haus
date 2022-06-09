@@ -10,14 +10,18 @@ import Modal from "./Modal/Modal";
 
 const StyledHabitList = styled.div`
 overflow: auto;
-padding: 1.5em;
+padding: 1em 1em;
 min-height: 30vh;
 `;
 
 const StyledTitle = styled.div`
+padding-inline: .8em;
 display: flex;
 justify-content: space-between;
 align-items: center;
+&>button {
+    
+}
 `;
 
 
@@ -33,7 +37,7 @@ export default function HabitList({ habitHook, day }) {
         <StyledHabitList>
             <StyledTitle>
                 <p>Habits</p>
-                <StyledBlueButton onClick={() => setShowModal(true)}>Add</StyledBlueButton>
+                <button onClick={() => setShowModal(true)}>+</button>
             </StyledTitle>
             {showModal && (
                 <Modal setShowModal={setShowModal} addHabit={addHabit}></Modal>

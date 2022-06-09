@@ -8,12 +8,11 @@ const StyledHabitEntry = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.1rem;
+        font-size: .8rem;
         background-color: #f9f9f9;
-        box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35);
-        margin: .8rem 0.2rem;
-        padding: .6em 1em;
-        border-radius: 6px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;        margin: .8rem 0.2rem;
+        padding: .6em .6em;
+        border-radius: 3px;
         list-style-type: none;
         @media (max-width: 900px) {
             font-size: 1rem;
@@ -26,14 +25,12 @@ const StyledActions = styled.div`
     align-items: center;
 
     &> input {
-   height: 30px;
-   width: 30px;
-   background: #f6f6f6;
+   height: 22px;
+   width: 22px;
   }
   & > button {
     margin:  0 .5rem;
     padding: .2em .6em;
-    color: var(--my-blue);
   }
 
   & > button:hover {
