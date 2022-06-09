@@ -93,7 +93,7 @@ export default function Login() {
 
 
                 <StyledButtonColumn>
-                    <StyledLoginLinkType2 to="/signup">Not signed up? Resgister here!</StyledLoginLinkType2>
+                    <StyledLoginLinkType2 to="/signup">Not signed up? Register here!</StyledLoginLinkType2>
                     <StyledLoginButtonType2 onClick={() => {
                         setEmail("guest@guest.com");
                         setPassword("test12345");
