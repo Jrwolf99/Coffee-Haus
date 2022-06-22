@@ -19,10 +19,13 @@ export const useDates = () => {
     return nextDay;
   };
 
-  const getDateAsString = (day) => {
+  const getDateAsString = (day, type) => {
     const monthString = getMyMonth(day.getMonth());
     const dayString = day.getDate();
     const yearString = day.getYear() + 1900;
+    if (type === "short") {
+      return `${dayString}`;
+    }
     return `${monthString} ${dayString}, ${yearString}`;
   };
 
