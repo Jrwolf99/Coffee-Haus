@@ -17,6 +17,24 @@ const StyledTitle = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+&>button {
+    width: 2.2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 100;
+    margin-right: 1rem;
+    transition: all .2s;
+
+    &:hover {
+        background: #1d65c1;
+        border-radius: 5px;
+        color: white;
+    }
+
+}
+
+
 `;
 
 export default function HabitList({ habitHook, day }) {
