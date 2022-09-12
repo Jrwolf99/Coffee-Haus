@@ -24,9 +24,7 @@ import { StyledNavBtn } from "../StyledComponents/Buttons";
 
 
 const StyledSideNav = styled.div`
-  grid-area: sidenav;
-  height: 95vh;
-  margin-top: 2vh;
+  height: 100%;
   border-radius: 0 10px 10px 0;
   background: var(--gradient-blue);
   color: white;

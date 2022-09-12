@@ -12,19 +12,17 @@ import useMobile from "../../hooks/useMobile";
 
 
 const StyledHabitPage = styled.div`
-    max-height: 80vh;
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-     gap: 2vw;
+    grid-template-columns: 1fr;
+    gap: 2vw;
      &>* {
-         height: calc(100% - .5rem);
         background-color: white;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
         border-radius: 5px;
      }
      @media (max-width: 900px) {
-        height: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }

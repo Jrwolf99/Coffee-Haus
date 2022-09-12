@@ -42,6 +42,8 @@ const StyledSide = styled.div`
   grid-area: sidenav;
   height: 95vh;
   max-width: 14vw;
+  margin-top: 2vh;
+
 `;
 
 

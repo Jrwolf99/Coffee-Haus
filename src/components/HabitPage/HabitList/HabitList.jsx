@@ -9,24 +9,15 @@ import Modal from "./Modal/Modal";
 
 
 const StyledHabitList = styled.div`
-overflow: auto;
 padding: 1em 1em;
 min-height: 30vh;
 `;
 
 const StyledTitle = styled.div`
-padding-inline: .8em;
 display: flex;
 justify-content: space-between;
 align-items: center;
-&>button {
-    
-}
 `;
-
-
-
-
 
 export default function HabitList({ habitHook, day }) {
 
