@@ -17,15 +17,15 @@ import { useDates } from "../hooks/useDates";
 
 const StyledHome = styled.div`
 display: grid;
-gap: 1rem;
 grid-template: "sidenav datenav datenav" 12vh
                 "sidenav workspace workspace";
 
-
-
+justify-content: center;
+gap: 1rem;
 
 `;
 const StyledWorkspace = styled.div`
+
   grid-area: workspace;
   width: 80vw;
   @media (min-width: 1500px) {
@@ -34,11 +34,12 @@ const StyledWorkspace = styled.div`
   }
 `;
 const StyledDate = styled.div`
+
   grid-area: datenav;
   margin-top: 2vh;
-  margin-right: 1rem;
 `;
 const StyledSide = styled.div`
+
   grid-area: sidenav;
   height: 95vh;
   max-width: 14vw;
