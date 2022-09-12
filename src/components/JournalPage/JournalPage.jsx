@@ -4,11 +4,11 @@ import JournalCard from './JournalCard/JournalCard';
 import { useFetch } from "../../hooks/useFetch"
 
 const StyledJournalPage = styled.div`
-    width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 
     @media (max-width: 900px) {
         height: 100%;

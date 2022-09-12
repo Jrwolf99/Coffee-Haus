@@ -6,14 +6,10 @@ import styled from "styled-components"
 import { StyledNavBtn, StyledWhiteButton } from "../StyledComponents/Buttons";
 
 const StyledDateNav = styled.div`
-  grid-area: datenav;
-  margin-top: 2vh;
-  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(gradient-blue);
-  /* background-color: pink; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   color: white;
@@ -23,6 +19,10 @@ export const StyledTodayBtn = styled(StyledNavBtn)`
         position: absolute;
         margin-left: 4rem;
         padding: .5em;
+
+        @media (max-width: 900px) {
+          display: none;
+        }
 `;
 
 export const StyledDateBar = styled.div`
@@ -44,9 +44,7 @@ align-items: center;
 text-align: center;
 
 @media (max-width: 900px) {
- 
   display: none;
-
 }
 
 `;

@@ -12,18 +12,14 @@ import useMobile from "../../hooks/useMobile";
 
 
 const StyledHabitPage = styled.div`
-    width: 100%;
     max-height: 80vh;
-     display: grid;
-     grid-template-rows: 1fr;
-     grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
      gap: 2vw;
-     padding-inline: 6vw;
      &>* {
          height: calc(100% - .5rem);
-         margin: .5rem;
-        padding: 1em;
-        background-color: #ebecf0;
+        background-color: white;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
         border-radius: 5px;
      }
@@ -41,7 +37,6 @@ export default function HabitPage({ dateHook }) {
     return (
         <StyledHabitPage>
             <HabitList habitHook={habitHook} day={dateHook.day} />
-
         </StyledHabitPage>
     )
 }

@@ -28,11 +28,20 @@ grid-template: "sidenav datenav datenav" 12vh
 const StyledWorkspace = styled.div`
   grid-area: workspace;
   width: 80vw;
-  margin-right: .5rem;
   @media (min-width: 1500px) {
     max-width: 1500px;
     margin-inline: auto;
   }
+`;
+const StyledDate = styled.div`
+  grid-area: datenav;
+  margin-top: 2vh;
+  margin-right: 1rem;
+`;
+const StyledSide = styled.div`
+  grid-area: sidenav;
+  height: 95vh;
+  max-width: 14vw;
 `;
 
 
@@ -40,8 +49,8 @@ export default function Home() {
   const [dateHook] = useDates();
   return (
     <StyledHome>
-      <DateNav dateHook={dateHook} />
-      <SideNav dateHook={dateHook} />
+      <StyledDate><DateNav dateHook={dateHook} /></StyledDate>
+      <StyledSide><SideNav dateHook={dateHook} /></StyledSide>
       <StyledWorkspace>
         <Routes>
           <Route path="habit/*" element={<HabitPage dateHook={dateHook} />} />
