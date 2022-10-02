@@ -1,21 +1,29 @@
 import React, { useState } from 'react'
 import styled from "styled-components"
-import { Link } from 'react-router-dom'
-
 import { StyledErrorMsg, StyledLoading } from './StyledComponents/Utility';
 import { StyledBlueButton, StyledLoginButtonType2, StyledLoginLinkType2 } from "./StyledComponents/Buttons"
-
-
 import { useLogin } from '../hooks/useLogin';
+import logo from "../assets/images/LOGO.svg"
+
+
 
 
 const StyledLoginPage = styled.div`
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 100px;
 `;
+
+
+
+const StyledLogo = styled.img``;
+
+
 
 const StyledLoginForm = styled.form`
     display: flex;
@@ -67,6 +75,10 @@ export default function Login() {
 
     return (
         <StyledLoginPage>
+
+            <StyledLogo src={logo} alt="coffee haus logo" />
+
+
             <StyledLoginForm onSubmit={handleSubmit}>
                 <label>
                     Email:
