@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-
+import React from "react";
 
 //packages
 import styled from "styled-components"
@@ -31,7 +30,6 @@ const StyledHabitPage = styled.div`
 
 export default function HabitPage({ dateHook }) {
     const [habitHook] = useHabits();
-    const { isMobile } = useMobile();
     return (
         <StyledHabitPage>
             <HabitList habitHook={habitHook} day={dateHook.day} />
